@@ -129,7 +129,7 @@ const CMS =() => {
                 Description: description,
             };
 
-            const response = await fetch("https://testbackend1-dqwh.onrender.com/api/woods",{
+            const response = await fetch(`https://testbackend1-dqwh.onrender.com/api/woods/${idData._id}`,{
                 method: "PUT",
                 headers: {
                     "Content-Type": "application/json",
