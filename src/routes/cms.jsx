@@ -91,7 +91,7 @@ const CMS =() => {
                 color: "Light Red",
                 density: 770,
                 pricePerUnit: 45.5,
-                Description: description,
+                description: description,
                 available: true,
             };
 
@@ -99,8 +99,8 @@ const CMS =() => {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
-                },
-                body: JSON.stringify(raw),
+                }
+               
             });
 
             if (!response.ok) {
@@ -126,7 +126,7 @@ const CMS =() => {
         try {
             const raw={
                 name: name,
-                Description: description,
+                description: description,
             };
 
             const response = await fetch(`https://testbackend1-dqwh.onrender.com/api/woods/${idData._id}`,{
