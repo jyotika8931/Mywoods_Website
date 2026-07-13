@@ -103,9 +103,15 @@ const CMS =() => {
                
             });
 
-            if (!response.ok) {
-                throw new Error("HTTP error! Status: ${response.status}")
+            const result = await response.json();
+
+             if (!response.ok) {
+             console.log(result);
+             alert(result.error || result.message);
+             return;
             }
+
+           console.log(result);
 
             const result =await response.json();
 
